@@ -91,15 +91,6 @@ public class Import_GUI extends javax.swing.JInternalFrame {
 
         importPanel = new javax.swing.JPanel();
         TabbedPane = new javax.swing.JTabbedPane();
-        Accounting_70Panel = new javax.swing.JPanel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jTextField19 = new javax.swing.JTextField();
-        jTextField20 = new javax.swing.JTextField();
-        jTextField21 = new javax.swing.JTextField();
-        jTextField22 = new javax.swing.JTextField();
         Accounting_71_APanel = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -129,79 +120,11 @@ public class Import_GUI extends javax.swing.JInternalFrame {
         clearButton = new javax.swing.JButton();
         Current_DateField = new javax.swing.JTextField();
         PageIDField = new javax.swing.JTextField();
+        Accounting_70Panel = new javax.swing.JPanel();
 
         importPanel.setBackground(new java.awt.Color(204, 255, 255));
         importPanel.setPreferredSize(new java.awt.Dimension(687, 610));
         importPanel.setLayout(new java.awt.BorderLayout());
-
-        Accounting_70Panel.setBackground(new java.awt.Color(204, 255, 255));
-
-        jLabel26.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel26.setText("Product name");
-
-        jLabel27.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel27.setText("Quantity");
-
-        jLabel28.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel28.setText("Unit");
-
-        jLabel29.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel29.setText("Price");
-
-        jTextField22.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout Accounting_70PanelLayout = new javax.swing.GroupLayout(Accounting_70Panel);
-        Accounting_70Panel.setLayout(Accounting_70PanelLayout);
-        Accounting_70PanelLayout.setHorizontalGroup(
-            Accounting_70PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Accounting_70PanelLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(Accounting_70PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(Accounting_70PanelLayout.createSequentialGroup()
-                        .addComponent(jLabel26)
-                        .addGap(55, 55, 55)
-                        .addComponent(jTextField19))
-                    .addGroup(Accounting_70PanelLayout.createSequentialGroup()
-                        .addComponent(jLabel27)
-                        .addGap(84, 84, 84)
-                        .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(Accounting_70PanelLayout.createSequentialGroup()
-                        .addGroup(Accounting_70PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(84, 84, 84)
-                        .addGroup(Accounting_70PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField21)
-                            .addComponent(jTextField22, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE))))
-                .addGap(0, 353, Short.MAX_VALUE))
-        );
-        Accounting_70PanelLayout.setVerticalGroup(
-            Accounting_70PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Accounting_70PanelLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(Accounting_70PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel26)
-                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(Accounting_70PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel27)
-                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(Accounting_70PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel28)
-                    .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(Accounting_70PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel29)
-                    .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(205, Short.MAX_VALUE))
-        );
-
-        TabbedPane.addTab("Accounting 70", Accounting_70Panel);
 
         Accounting_71_APanel.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -394,17 +317,14 @@ public class Import_GUI extends javax.swing.JInternalFrame {
                         .addGroup(Accounting_71_APanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel16)
                             .addComponent(Date_Of_SaleChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
                 .addGroup(Accounting_71_APanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Accounting_71_APanelLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(Accounting_71_APanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel10)
-                            .addComponent(Current_DateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(Accounting_71_APanelLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(Accounting_71_APanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(QuantityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(Accounting_71_APanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel10)
+                        .addComponent(Current_DateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Accounting_71_APanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel6)
+                        .addComponent(QuantityField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(9, 9, 9)
                 .addGroup(Accounting_71_APanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(UnitField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -434,12 +354,60 @@ public class Import_GUI extends javax.swing.JInternalFrame {
 
         TabbedPane.addTab("Accounting 71 A", Accounting_71_APanel);
 
+        Accounting_70Panel.setBackground(new java.awt.Color(204, 255, 255));
+
+        javax.swing.GroupLayout Accounting_70PanelLayout = new javax.swing.GroupLayout(Accounting_70Panel);
+        Accounting_70Panel.setLayout(Accounting_70PanelLayout);
+        Accounting_70PanelLayout.setHorizontalGroup(
+            Accounting_70PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 672, Short.MAX_VALUE)
+        );
+        Accounting_70PanelLayout.setVerticalGroup(
+            Accounting_70PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 391, Short.MAX_VALUE)
+        );
+
+        TabbedPane.addTab("Accounting 70", Accounting_70Panel);
+
         importPanel.add(TabbedPane, java.awt.BorderLayout.PAGE_START);
 
         getContentPane().add(importPanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void PageIDFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PageIDFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PageIDFieldActionPerformed
+
+    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
+        clearFields();
+    }//GEN-LAST:event_clearButtonActionPerformed
+
+    private void update_deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_deleteButtonActionPerformed
+
+    }//GEN-LAST:event_update_deleteButtonActionPerformed
+
+    private void View_SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_View_SearchButtonActionPerformed
+        View_Accounting_71A VA = new View_Accounting_71A();
+        this.dispose();
+        VA.setVisible(true);
+    }//GEN-LAST:event_View_SearchButtonActionPerformed
+
+    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
+        if (collectImportData()) {
+            importManager.addImport();
+            clearFields();
+        }
+    }//GEN-LAST:event_saveButtonActionPerformed
+
+    private void PriceFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PriceFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PriceFieldActionPerformed
+
+    private void ProductNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductNameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProductNameFieldActionPerformed
 
     private boolean collectImportData() {
         String ministry = MinistryLabel.getText().trim();
@@ -490,7 +458,7 @@ public class Import_GUI extends javax.swing.JInternalFrame {
         importManager.setDateOfOrder(dateOfOrder);
         importManager.setDateOfSale(dateOfSale);
         importManager.setRecipient(recipient);
-        importManager.setNote(note.isEmpty() ? null : note); // Null if empty
+        importManager.setNote(note.isEmpty() ? "" : note); // Null if empty
 
         return true;
     }
@@ -508,43 +476,6 @@ public class Import_GUI extends javax.swing.JInternalFrame {
         PageIDField.setText(""); // Reset, though not used for new entries
     }
     
-    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
-        clearFields();
-    }//GEN-LAST:event_clearButtonActionPerformed
-
-    private void update_deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_deleteButtonActionPerformed
-
-        
-    }//GEN-LAST:event_update_deleteButtonActionPerformed
-
-    private void View_SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_View_SearchButtonActionPerformed
-        JOptionPane.showMessageDialog(this, "View/Search functionality to be implemented in a new frame", 
-                                      "Info", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_View_SearchButtonActionPerformed
-
-    private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformed
-        if (collectImportData()) {
-            importManager.addImport();
-            clearFields();
-        }
-    }//GEN-LAST:event_saveButtonActionPerformed
-
-    private void ProductNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductNameFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ProductNameFieldActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
-
-    private void PageIDFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PageIDFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PageIDFieldActionPerformed
-
-    private void PriceFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PriceFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PriceFieldActionPerformed
-
     public void cleanup() {
         if (importManager != null) {
             importManager.closeConnection();
@@ -570,56 +501,18 @@ public class Import_GUI extends javax.swing.JInternalFrame {
     private javax.swing.JButton View_SearchButton;
     private javax.swing.JButton clearButton;
     private javax.swing.JPanel importPanel;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
-    private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JButton saveButton;
     private javax.swing.JButton update_deleteButton;
     // End of variables declaration//GEN-END:variables

@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import java.sql.*;
+import backend.login;
 
 /**
  *
@@ -15,12 +16,14 @@ public class Login extends javax.swing.JFrame {
     Connection con;
     PreparedStatement pst;
     ResultSet rs;
+    private login loginBackend;
 
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        loginBackend = new login();
         dbConnection();
     }
     
@@ -207,49 +210,37 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_clearButtonActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        try {
-            
-            String sql = "SELECT * FROM `user`";
-            pst = con.prepareStatement(sql);
-            rs = pst.executeQuery();
-            //rs.next();
-            
-            if (usernameField.getText().equals("")||
-                    passwordField.getText().equals("")||
-                    roleBox.getSelectedItem().toString().equals("Select a role")){
-                JOptionPane.showMessageDialog(null, "You must fill in all fields","warning" , JOptionPane.ERROR_MESSAGE);                
-            }else{
-                
-                boolean matchFound = false;
-                
-            while (rs.next()){
-                if (usernameField.getText().equals(rs.getString("Username")) && 
-                        passwordField.getText().equals(rs.getString("Password")) && 
-                        roleBox.getSelectedItem().toString().equals(rs.getString("Role Selection"))){
-                    
-                    matchFound = true;
-                    
-                    if (roleBox.getSelectedItem().toString().equals("User")){
-                        JOptionPane.showMessageDialog(null, "Welcome to User Form", "information", JOptionPane.INFORMATION_MESSAGE);
-                        User_Dashboard UD = new User_Dashboard();
-                        UD.setVisible(true);
-                        this.setVisible(false);
-                    }else{
-                        JOptionPane.showMessageDialog(null, "Welcome to Admin Form", "information", JOptionPane.INFORMATION_MESSAGE);
-                        Admin_Dashboard AD = new Admin_Dashboard();
-                        AD.setVisible(true);
-                        this.setVisible(false);
-                    }                    
-                }   
-            }
-            
-            if (!matchFound){
-            JOptionPane.showMessageDialog(null, "Username or Password is wrong","warning" , JOptionPane.ERROR_MESSAGE);
+        String username = usernameField.getText();
+        String password = new String(passwordField.getPassword());
+        String role = roleBox.getSelectedItem().toString();
+
+        // Validate input fields
+        if (username.isEmpty() || password.isEmpty() || role.equals("Select a role")) {
+            JOptionPane.showMessageDialog(null, "You must fill in all fields", "Warning", JOptionPane.ERROR_MESSAGE);
+            return;
         }
+
+        // Verify credentials using backend
+        boolean isValid = loginBackend.verifyCredentials(username, password, role);
+        if (isValid) {
+            // Use getter to retrieve role (or use the selected roleBox value)
+            String userRole = loginBackend.getRole();
+            String userName = loginBackend.getUsername();
+
+            // Open appropriate dashboard based on role
+            if (userRole.equals("User")) {
+                JOptionPane.showMessageDialog(null, "Welcome, " + userName + ", to User Form", "Information", JOptionPane.INFORMATION_MESSAGE);
+                User_Dashboard ud = new User_Dashboard();
+                ud.setVisible(true);
+                this.setVisible(false);
+            } else { // Assuming "Admin" is the other role
+                JOptionPane.showMessageDialog(null, "Welcome, " + userName + ", to Admin Form", "Information", JOptionPane.INFORMATION_MESSAGE);
+                Admin_Dashboard ad = new Admin_Dashboard();
+                ad.setVisible(true);
+                this.setVisible(false);
             }
-            
-        } catch (SQLException e) {
-            System.out.println("e");
+        } else {
+            JOptionPane.showMessageDialog(null, "Username or Password is wrong", "Warning", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_loginButtonActionPerformed
 
